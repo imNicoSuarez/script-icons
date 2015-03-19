@@ -1,0 +1,21 @@
+{
+  "name": "script-icons",
+  "version": "1.0.0",
+  "description": "Generate icons for Mapright.",
+  "main": "app.js",
+  "scripts": {
+    "start": "sh script.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imNicoSuarez/script-icons.git"
+  },
+  "author": "Nicolas Suarez",
+  "bugs": {
+    "url": "https://github.com/imNicoSuarez/script-icons/issues"
+  },
+  "homepage": "https://github.com/imNicoSuarez/script-icons",
+  "dependencies": {
+    "simple-imagemagick": "^0.2.2"
+  }
+}

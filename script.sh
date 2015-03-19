@@ -1,129 +1,131 @@
 #!/usr/bin/env bash
 
-# MDPI
-node app.js
+# GENERATE FOLDER
+# node app.js
 
 echo 'Start Move Image'
-mkdir barn
-mkdir barn/barn-circle
-mkdir barn/barn-rectangle
-mv barn-circle*.png ./barn/barn-circle
-mv barn-rectangle*.png ./barn/barn-rectangle
+rm -rf icons-mapright
+mkdir icons-mapright
 
-mkdir dump
-mkdir dump/dump-circle
-mkdir dump/dump-rectangle
-mv dump-circle*.png ./dump/dump-circle
-mv dump-rectangle*.png ./dump/dump-rectangle
+mkdir icons-mapright/barn
+mkdir icons-mapright/barn/barn-circle
+mkdir icons-mapright/barn/barn-rectangle
+mv barn-circle*.png ./icons-mapright/barn/barn-circle
+mv barn-rectangle*.png ./icons-mapright/barn/barn-rectangle
 
-mkdir gate
-mkdir gate/gate-circle
-mkdir gate/gate-rectangle
-mv gate-circle*.png ./gate/gate-circle
-mv gate-rectangle*.png ./gate/gate-rectangle
+mkdir icons-mapright/dump
+mkdir icons-mapright/dump/dump-circle
+mkdir icons-mapright/dump/dump-rectangle
+mv dump-circle*.png ./icons-mapright/dump/dump-circle
+mv dump-rectangle*.png ./icons-mapright/dump/dump-rectangle
 
-mkdir main-house
-mkdir main-house/main-house-circle
-mkdir main-house/main-house-rectangle
-mv main-house-circle*.png ./main-house/main-house-circle
-mv main-house-rectangle*.png ./main-house/main-house-rectangle
+mkdir icons-mapright/gate
+mkdir icons-mapright/gate/gate-circle
+mkdir icons-mapright/gate/gate-rectangle
+mv gate-circle*.png ./icons-mapright/gate/gate-circle
+mv gate-rectangle*.png ./icons-mapright/gate/gate-rectangle
 
-mkdir photo-point
-mkdir photo-point/photo-point-circle
-mkdir photo-point/photo-point-rectangle
-mv photo-point-circle*.png ./photo-point/photo-point-circle
-mv photo-point-rectangle*.png ./photo-point/photo-point-rectangle
+mkdir icons-mapright/main-house
+mkdir icons-mapright/main-house/main-house-circle
+mkdir icons-mapright/main-house/main-house-rectangle
+mv main-house-circle*.png ./icons-mapright/main-house/main-house-circle
+mv main-house-rectangle*.png ./icons-mapright/main-house/main-house-rectangle
 
-mkdir spring
-mkdir spring/spring-circle
-mkdir spring/spring-rectangle
-mv spring-circle*.png ./spring/spring-circle
-mv spring-rectangle*.png ./spring/spring-rectangle
+mkdir icons-mapright/photo-point
+mkdir icons-mapright/photo-point/photo-point-circle
+mkdir icons-mapright/photo-point/photo-point-rectangle
+mv photo-point-circle*.png ./icons-mapright/photo-point/photo-point-circle
+mv photo-point-rectangle*.png ./icons-mapright/photo-point/photo-point-rectangle
 
-mkdir well
-mkdir well/well-circle
-mkdir well/well-rectangle
-mv well-circle*.png ./well/well-circle
-mv well-rectangle*.png ./well/well-rectangle
+mkdir icons-mapright/spring
+mkdir icons-mapright/spring/spring-circle
+mkdir icons-mapright/spring/spring-rectangle
+mv spring-circle*.png ./icons-mapright/spring/spring-circle
+mv spring-rectangle*.png ./icons-mapright/spring/spring-rectangle
 
-mkdir blind
-mkdir blind/blind-circle
-mkdir blind/blind-rectangle
-mv blind-circle*.png ./blind/blind-circle
-mv blind-rectangle*.png ./blind/blind-rectangle
+mkdir icons-mapright/well
+mkdir icons-mapright/well/well-circle
+mkdir icons-mapright/well/well-rectangle
+mv well-circle*.png ./icons-mapright/well/well-circle
+mv well-rectangle*.png ./icons-mapright/well/well-rectangle
 
-mkdir feeder
-mkdir feeder/feeder-circle
-mkdir feeder/feeder-rectangle
-mv feeder-circle*.png ./feeder/feeder-circle
-mv feeder-rectangle*.png ./feeder/feeder-rectangle
+mkdir icons-mapright/blind
+mkdir icons-mapright/blind/blind-circle
+mkdir icons-mapright/blind/blind-rectangle
+mv blind-circle*.png ./icons-mapright/blind/blind-circle
+mv blind-rectangle*.png ./icons-mapright/blind/blind-rectangle
 
-mkdir horse-stall
-mkdir horse-stall/horse-stall-circle
-mkdir horse-stall/horse-stall-rectangle
-mv horse-stall-circle*.png ./horse-stall/horse-stall-circle
-mv horse-stall-rectangle*.png ./horse-stall/horse-stall-rectangle
+mkdir icons-mapright/feeder
+mkdir icons-mapright/feeder/feeder-circle
+mkdir icons-mapright/feeder/feeder-rectangle
+mv feeder-circle*.png ./icons-mapright/feeder/feeder-circle
+mv feeder-rectangle*.png ./icons-mapright/feeder/feeder-rectangle
 
-mkdir oil-well
-mkdir oil-well/oil-well-circle
-mkdir oil-well/oil-well-rectangle
-mv oil-well-circle*.png ./oil-well/oil-well-circle
-mv oil-well-rectangle*.png ./oil-well/oil-well-rectangle
+mkdir icons-mapright/horse-stall
+mkdir icons-mapright/horse-stall/horse-stall-circle
+mkdir icons-mapright/horse-stall/horse-stall-rectangle
+mv horse-stall-circle*.png ./icons-mapright/horse-stall/horse-stall-circle
+mv horse-stall-rectangle*.png ./icons-mapright/horse-stall/horse-stall-rectangle
 
-mkdir pier
-mkdir pier/pier-circle
-mkdir pier/pier-rectangle
-mv pier-circle*.png ./pier/pier-circle
-mv pier-rectangle*.png ./pier/pier-rectangle
+mkdir icons-mapright/oil-well
+mkdir icons-mapright/oil-well/oil-well-circle
+mkdir icons-mapright/oil-well/oil-well-rectangle
+mv oil-well-circle*.png ./icons-mapright/oil-well/oil-well-circle
+mv oil-well-rectangle*.png ./icons-mapright/oil-well/oil-well-rectangle
 
-mkdir trough
-mkdir trough/trough-circle
-mkdir trough/trough-rectangle
-mv trough-circle*.png ./trough/trough-circle
-mv trough-rectangle*.png ./trough/trough-rectangle
+mkdir icons-mapright/pier
+mkdir icons-mapright/pier/pier-circle
+mkdir icons-mapright/pier/pier-rectangle
+mv pier-circle*.png ./icons-mapright/pier/pier-circle
+mv pier-rectangle*.png ./icons-mapright/pier/pier-rectangle
 
-mkdir windmill
-mkdir windmill/windmill-circle
-mkdir windmill/windmill-rectangle
-mv windmill-circle*.png ./windmill/windmill-circle
-mv windmill-rectangle*.png ./windmill/windmill-rectangle
+mkdir icons-mapright/trough
+mkdir icons-mapright/trough/trough-circle
+mkdir icons-mapright/trough/trough-rectangle
+mv trough-circle*.png ./icons-mapright/trough/trough-circle
+mv trough-rectangle*.png ./icons-mapright/trough/trough-rectangle
 
+mkdir icons-mapright/windmill
+mkdir icons-mapright/windmill/windmill-circle
+mkdir icons-mapright/windmill/windmill-rectangle
+mv windmill-circle*.png ./icons-mapright/windmill/windmill-circle
+mv windmill-rectangle*.png ./icons-mapright/windmill/windmill-rectangle
 
-mkdir cabin
-mkdir cabin/cabin-circle
-mkdir cabin/cabin-rectangle
-mv cabin-circle*.png ./cabin/cabin-circle
-mv cabin-rectangle*.png ./cabin/cabin-rectangle
+mkdir icons-mapright/cabin
+mkdir icons-mapright/cabin/cabin-circle
+mkdir icons-mapright/cabin/cabin-rectangle
+mv cabin-circle*.png ./icons-mapright/cabin/cabin-circle
+mv cabin-rectangle*.png ./icons-mapright/cabin/cabin-rectangle
 
-mkdir foremans-house
-mkdir foremans-house/foremans-house-circle
-mkdir foremans-house/foremans-house-rectangle
-mv foremans-house-circle*.png ./foremans-house/foremans-house-circle
-mv foremans-house-rectangle*.png ./foremans-house/foremans-house-rectangle
+mkdir icons-mapright/foremans-house
+mkdir icons-mapright/foremans-house/foremans-house-circle
+mkdir icons-mapright/foremans-house/foremans-house-rectangle
+mv foremans-house-circle*.png ./icons-mapright/foremans-house/foremans-house-circle
+mv foremans-house-rectangle*.png ./icons-mapright/foremans-house/foremans-house-rectangle
 
-mkdir house
-mkdir house/house-circle
-mkdir house/house-rectangle
-mv house-circle*.png ./house/house-circle
-mv house-rectangle*.png ./house/house-rectangle
+mkdir icons-mapright/house
+mkdir icons-mapright/house/house-circle
+mkdir icons-mapright/house/house-rectangle
+mv house-circle*.png ./icons-mapright/house/house-circle
+mv house-rectangle*.png ./icons-mapright/house/house-rectangle
 
-mkdir pens
-mkdir pens/pens-circle
-mkdir pens/pens-rectangle
-mv pens-circle*.png ./pens/pens-circle
-mv pens-rectangle*.png ./pens/pens-rectangle
+mkdir icons-mapright/pens
+mkdir icons-mapright/pens/pens-circle
+mkdir icons-mapright/pens/pens-rectangle
+mv pens-circle*.png ./icons-mapright/pens/pens-circle
+mv pens-rectangle*.png ./icons-mapright/pens/pens-rectangle
 
-mkdir shed-shack
-mkdir shed-shack/shed-shack-circle
-mkdir shed-shack/shed-shack-rectangle
-mv shed-shack-circle*.png ./shed-shack/shed-shack-circle
-mv shed-shack-rectangle*.png ./shed-shack/shed-shack-rectangle
+mkdir icons-mapright/shed-shack
+mkdir icons-mapright/shed-shack/shed-shack-circle
+mkdir icons-mapright/shed-shack/shed-shack-rectangle
+mv shed-shack-circle*.png ./icons-mapright/shed-shack/shed-shack-circle
+mv shed-shack-rectangle*.png ./icons-mapright/shed-shack/shed-shack-rectangle
 
-mkdir water-storage-tank
-mkdir water-storage-tank/water-storage-tank-circle
-mkdir water-storage-tank/water-storage-tank-rectangle
-mv water-storage-tank-circle*.png ./water-storage-tank/water-storage-tank-circle
-mv water-storage-tank-rectangle*.png ./water-storage-tank/water-storage-tank-rectangle
+mkdir icons-mapright/water-storage-tank
+mkdir icons-mapright/water-storage-tank/water-storage-tank-circle
+mkdir icons-mapright/water-storage-tank/water-storage-tank-rectangle
+mv water-storage-tank-circle*.png ./icons-mapright/water-storage-tank/water-storage-tank-circle
+mv water-storage-tank-rectangle*.png ./icons-mapright/water-storage-tank/water-storage-tank-rectangle
 
 rm circle-*.png
 rm round-rectangle-*.png
