@@ -2,11 +2,36 @@
 
 var im = require('simple-imagemagick');
 
-var colors = ['#ef4a4b','#d52128','#991c20','#c76baa','#a12b8a','#6b1f5a',
-              '#21abe2','#265ba2','#19355f','#90d2c7','#437839','#2e4922',
-              '#f89d5f','#f06723','#b04925','#f293bc','#ef5598','#de216f',
-              '#b66329','#80351a','#5f2b11','#fbe986','#fecd0a','#bd9a2f',
-              '#ffffff','#c0bfbe','#6b6a6a','#4d4e4e','#232523','#010101' ]
+var colors = [{ color_name: 'light-red',    color_hexa: '#FF4747' },
+              { color_name: 'red',          color_hexa: '#D40000' },
+              { color_name: 'dark-red',     color_hexa: '#9A0000' },
+              { color_name: 'light-purple', color_hexa: '#D568C0' },
+              { color_name: 'purple',       color_hexa: '#A02C89' },
+              { color_name: 'dark-purple',  color_hexa: '#6A1D5B' },
+              { color_name: 'light-blue',   color_hexa: '#00AEEF' },
+              { color_name: 'blue',         color_hexa: '#2C5AA0' },
+              { color_name: 'dark-blue',    color_hexa: '#1A355F' },
+              { color_name: 'light-green',  color_hexa: '#73FFDF' },
+              { color_name: 'green',        color_hexa: '#447821' },
+              { color_name: 'dark-green',   color_hexa: '#294914' },
+              { color_name: 'light-orange', color_hexa: '#FF9E5E' },
+              { color_name: 'orange',       color_hexa: '#FF6600' },
+              { color_name: 'dark-orange',  color_hexa: '#B14700' },
+              { color_name: 'light-pink',   color_hexa: '#FF94BF' },
+              { color_name: 'pink',         color_hexa: '#FF5599' },
+              { color_name: 'dark-pink',    color_hexa: '#DC256E' },
+              { color_name: 'light-brown',  color_hexa: '#B5622B' },
+              { color_name: 'brown',        color_hexa: '#803300' },
+              { color_name: 'dark-brown',   color_hexa: '#622700' },
+              { color_name: 'light-yellow', color_hexa: '#FFE888' },
+              { color_name: 'yellow',       color_hexa: '#FFCC00' },
+              { color_name: 'dark-yellow',  color_hexa: '#BF9900' },
+              { color_name: 'white',        color_hexa: '#FFFFFF' },
+              { color_name: 'gray-25',      color_hexa: '#BFBFBF' },
+              { color_name: 'gray-58',      color_hexa: '#6A6A6A' },
+              { color_name: 'gray-70',      color_hexa: '#4d4d4d' },
+              { color_name: 'gray-85',      color_hexa: '#252525' },
+              { color_name: 'black',        color_hexa: '#000000' }]
 
 var icons = ['barn' , 'dump', 'gate', 'main-house', 'photo-point', 'spring', 'well',
             'blind', 'feeder', 'horse-stall', 'oil-well', 'pier', 'trough', 'windmill',
@@ -18,10 +43,9 @@ icons.forEach(function(icon) {
   console.log(icon);
 
   colors.forEach(function(color) {
-    var colorCurrent = color;
     var nameCurrent = icon;
 
-    generateIcon(nameCurrent, colorCurrent, counter);
+    generateIcon(nameCurrent, color, counter);
 
     counter++;
   });
@@ -30,13 +54,13 @@ icons.forEach(function(icon) {
 function generateIcon(name, color, i){
   var options = {
     name: name,
-    color: color,
+    color: color.color_hexa,
     nameFile: './icons-png/ranching-png/'+ name + '.png',
     nameSmall: name + '-small.png',
-    nameCircleOuput: name+'-circle-' + i + '.png',
-    nameRectangleOuput: name+'-rectangle-' + i + '.png',
-    nameCircle: 'circle-'+color+'.png',
-    nameRectangle: 'round-rectangle-'+color+'.png'
+    nameCircleOuput: name+'-circle-' + color.color_name + '.png',
+    nameRectangleOuput: name+'-rectangle-' + color.color_name + '.png',
+    nameCircle: 'circle-'+color.color_hexa+'.png',
+    nameRectangle: 'round-rectangle-'+color.color_hexa+'.png'
   };
 
   generateCircleIcons(options, function(){
