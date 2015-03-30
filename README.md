@@ -4,11 +4,11 @@ Script Generate Icons
 
 ## Install IMAGEMAGIC
 
-[http://www.imagemagick.org/script/binary-releases.php] http://www.imagemagick.org/script/binary-releases.php
+http://www.imagemagick.org/script/binary-releases.php
 
 ## Install NODE.JS
 
-[http://nodejs.org/] http://nodejs.org/
+http://nodejs.org/
 
 ##Generate Icon
 ~~~bash
