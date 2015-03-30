@@ -2,37 +2,33 @@
 
 var im = require('simple-imagemagick');
 
-var lines =  [ { name: 'fence', type: 'dotted', fill: false, background: false},
-               { name: 'road-trail', type: 'longdash', fill: false, background: false },
-               { name: 'primary-road', type: 'solid', fill: false, background: false },
-               { name: 'pipeline', type: 'dotted', fill: false, background: true},
-               { name: 'transmission-line', type: 'dotted', fill: true, background: false},
-               { name: 'stream-intermitent', type: 'twodash', fill: false, background: false, oneColor: true, color: '#03728c'},
-               { name: 'river-creek', type: 'solid', fill: false, background: false, oneColor: true, color: '#03728c'} ]
+var customColor = {name: 'blue', hex:'#03728c'};
 
-var colors = ['#ef4a4b','#d52128','#991c20','#c76baa','#a12b8a','#6b1f5a',
-              '#21abe2','#265ba2','#19355f','#90d2c7','#437839','#2e4922',
-              '#f89d5f','#f06723','#b04925','#f293bc','#ef5598','#de216f',
-              '#b66329','#80351a','#5f2b11','#fbe986','#fecd0a','#bd9a2f',
-              '#ffffff','#c0bfbe','#6b6a6a','#4d4e4e','#232523','#010101' ]
+var lines =  [ { name: 'fence', type: 'dotted', fill: false, background: false, strokewidth: 2},
+               { name: 'road-trail', type: 'longdash', fill: false, background: false, strokewidth: 2},
+               { name: 'primary-road', type: 'solid', fill: false, background: false, strokewidth: 2 },
+               { name: 'pipeline', type: 'dotted', fill: false, background: true, strokewidth: 2 },
+               { name: 'transmission-line', type: 'dotted', fill: true, background: false, strokewidth: 2 },
+               { name: 'stream-intermitent', type: 'twodash', fill: false, background: false, strokewidth: 4,  oneColor: true, color: customColor},
+               { name: 'river-creek', type: 'solid', fill: false, background: false, strokewidth: 4, oneColor: true, color: customColor } ]
+
+var colors = require('./config.json').colors;
 
 lines.forEach(function(line) {
   var counter = 0;
 
   console.log(line.name);
   if (line.oneColor) {
-    var colorCurrent = line.color;
     var nameCurrent = line.name;
 
-    generateLine(line, colorCurrent,  counter);
+    generateLine(line, line.color,  counter);
 
     counter++;
   } else {
     colors.forEach(function(color) {
-      var colorCurrent = color;
       var nameCurrent = line.name;
 
-      generateLine(line, colorCurrent,  counter);
+      generateLine(line, color,  counter);
 
       counter++;
     });
@@ -42,17 +38,18 @@ lines.forEach(function(line) {
 function generateLine(line, color,  i){
   var options = {
     name: line.name,
-    color: ( (line.fill || line.background) ? "#000000" : color ),
-    backgroundColor:  ( (line.background) ? color : 'none'),
-    fillColor: ( (line.fill) ? color : 'none'),
+    color: ( (line.fill || line.background) ? "#000000" : color.hex ),
+    backgroundColor:  ( (line.background) ? color.hex : 'none'),
+    fillColor: ( (line.fill) ? color.hex : 'none'),
     fill: line.fill,
     background: line.background,
     line: line.type,
+    strokewidth: line.strokewidth,
     nameFile: './lines/ranching-png/'+ line.name + '.png',
     nameSmall: line.name + '-small.png',
-    nameLineOuput: line.name+'-line-' + i + '.png',
-    nameLine: 'line-'+color+'.png',
-    nameBackgroundLine: 'line-background-'+color+'.png'
+    nameLineOuput: line.name+'-line-' + color.name + '.png',
+    nameLine: 'line-'+color.hex+'.png',
+    nameBackgroundLine: 'line-background-'+color.hex+'.png'
   };
 
   generateDrawLine(options, function(){});
@@ -63,8 +60,8 @@ function generateDrawLine(options, callback){
   console.log(options.color);
 
   im.convert(['transparent.png', '-fill', options.fillColor,
-              '-stroke', options.color, '-strokewidth', '1',
-              '-draw', typeLine(options.line) , name],
+              '-stroke', options.color, '-strokewidth', options.strokewidth,
+              '-draw', typeLine(options.line), name],
 
   function(err, stdout){
 
@@ -134,7 +131,5 @@ function typeLine(line){
     default:
       styleLine =  " " ;
   }
-
   return styleLine;
-
 }

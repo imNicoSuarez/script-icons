@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # GENERATE FOLDER
-# node app.js
+# node icons.js
 
 echo 'Start Move Image'
 rm -rf icons-mapright
