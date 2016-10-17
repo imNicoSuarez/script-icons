@@ -27,6 +27,10 @@
            { "name": "gray-58",      "hex": "#6A6A6A" },
            { "name": "gray-70",      "hex": "#4d4d4d" },
            { "name": "gray-85",      "hex": "#252525" },
-           { "name": "black",        "hex": "#000000" }]
+           { "name": "black",        "hex": "#000000" },
+           { "name": "lighter-green","hex": "#D4FEC0" },
+           { "name": "two-yellow",   "hex": "#FFF200" },
+           { "name": "two-red",      "hex": "#ED1C24" },
+           { "name": "two-purple",   "hex": "#662D91" }]
 
 }

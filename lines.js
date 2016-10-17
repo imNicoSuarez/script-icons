@@ -111,22 +111,22 @@ function typeLine(line){
 
   switch(line) {
     case 'dashed':
-      styleLine = "stroke-dasharray 5 3 path 'M 10,30 L 90,30'" ;
+      styleLine = "stroke-dasharray 5 3 path 'M 0,30 L 70,30'" ;
       break;
     case 'dotted':
-      styleLine =  "stroke-dasharray 1 6 path 'M 10,30 L 90,30'" ;
+      styleLine =  "stroke-dasharray 1 6 path 'M 0,30 L 70,30'" ;
       break;
     case 'dotdash':
-      styleLine = "stroke-dasharray 1 3 3 3 path 'M 10,30 L 90,30'" ;
+      styleLine = "stroke-dasharray 1 3 3 3 path 'M 0,30 L 70,30'" ;
       break;
     case 'longdash':
-      styleLine =  "stroke-dasharray 8 10 path 'M 10,30 L 90,30'" ;
+      styleLine =  "stroke-dasharray 8 10 path 'M 0,30 L 70,30'" ;
       break;
     case 'twodash':
-      styleLine =  "stroke-dasharray 10 3 3 3 path 'M 10,30 L 90,30'" ;
+      styleLine =  "stroke-dasharray 10 3 3 3 path 'M 0,30 L 70,30'" ;
       break;
     case 'solid':
-      styleLine =  "path 'M 10,30 L 90,30'" ;
+      styleLine =  "path 'M 0,30 L 70,30'" ;
       break;
     default:
       styleLine =  " " ;

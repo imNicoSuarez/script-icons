@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # GENERATE FOLDER
-node lines.js
+# node lines.js
 
 echo 'Start Move Image'
 rm -rf lines-mapright
@@ -31,3 +31,7 @@ mv river-creek-line*.png ./lines-mapright/river-creek
 rm line-*.png
 rm line-background-*.png
 echo 'End Move Image'
+
+
+
+
