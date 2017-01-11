@@ -4,13 +4,14 @@ var im = require('simple-imagemagick');
 
 var customColor = {name: 'blue', hex:'#03728c'};
 
-var lines =  [ { name: 'fence', type: 'dotted', fill: false, background: false, strokewidth: 2},
-               { name: 'road-trail', type: 'longdash', fill: false, background: false, strokewidth: 2},
-               { name: 'primary-road', type: 'solid', fill: false, background: false, strokewidth: 2 },
-               { name: 'pipeline', type: 'dotted', fill: false, background: true, strokewidth: 2 },
-               { name: 'transmission-line', type: 'dotted', fill: true, background: false, strokewidth: 2 },
-               { name: 'stream-intermitent', type: 'twodash', fill: false, background: false, strokewidth: 4,  oneColor: true, color: customColor},
-               { name: 'river-creek', type: 'solid', fill: false, background: false, strokewidth: 4, oneColor: true, color: customColor } ]
+var lines =  [ 
+            { name: 'fence', type: 'dotted', fill: false, background: false, strokewidth: 2},
+            { name: 'road-trail', type: 'longdash', fill: false, background: false, strokewidth: 2},
+            { name: 'primary-road', type: 'solid', fill: false, background: false, strokewidth: 2 },
+            { name: 'pipeline', type: 'dotted', fill: false, background: true, strokewidth: 2 },
+            { name: 'transmission-line', type: 'dotted', fill: true, background: false, strokewidth: 2 },
+            { name: 'stream-intermitent', type: 'twodash', fill: false, background: false, strokewidth: 4,  oneColor: true, color: customColor},
+            { name: 'river-creek', type: 'solid', fill: false, background: false, strokewidth: 4, oneColor: true, color: customColor } ]
 
 var colors = require('./config.json').colors;
 
